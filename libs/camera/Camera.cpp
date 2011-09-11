@@ -312,7 +312,7 @@ status_t Camera::setCustomParameters(const String8& params)
     LOGV("setCustomParameters");
     sp <ICamera> c = mCamera;
     if (c == 0) return NO_INIT;
-    return c->setParameters(params);
+    return c->setCustomParameters(params);
 }
 #endif
 
@@ -333,7 +333,7 @@ String8 Camera::getCustomParameters() const
     LOGV("getCustomParameters");
     String8 params;
     sp <ICamera> c = mCamera;
-    if (c != 0) params = mCamera->getParameters();
+    if (c != 0) params = mCamera->getCustomParameters();
     return params;
 }
 #endif
