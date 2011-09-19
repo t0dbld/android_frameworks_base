@@ -306,7 +306,7 @@ status_t Camera::setParameters(const String8& params)
 }
 
 #ifdef MOTO_CUSTOM_PARAMETERS
-// set preview/capture parameters - key/value pairs
+// set preview/capture custom parameters - key/value pairs
 status_t Camera::setCustomParameters(const String8& params)
 {
     LOGV("setCustomParameters");
@@ -316,7 +316,7 @@ status_t Camera::setCustomParameters(const String8& params)
 }
 #endif
 
-// get preview/capture parameters - key/value pairs
+// get preview/capture custom parameters - key/value pairs
 String8 Camera::getParameters() const
 {
     LOGV("getParameters");
