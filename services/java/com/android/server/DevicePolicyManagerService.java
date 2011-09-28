@@ -775,7 +775,7 @@ public class DevicePolicyManagerService extends IDevicePolicyManager.Stub {
                             + " does not meet required length " + length);
                     return false;
                 }
-               } 
+                
             }
             int length = getPasswordMinimumLength(null);
             if (password.length() < length) {
