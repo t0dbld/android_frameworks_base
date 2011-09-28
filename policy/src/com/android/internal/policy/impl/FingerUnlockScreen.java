@@ -1395,7 +1395,7 @@ class FingerUnlockScreen extends LinearLayoutWithDefaultTouchRecepient
     	            public void onFinish() {
         	  			mErrorPrompt.setText("");
     	            }
-
+			
 					@Override
 					public void onTick(long millisUntilFinished) {
 						// TODO Auto-generated method stub
@@ -1405,5 +1405,7 @@ class FingerUnlockScreen extends LinearLayoutWithDefaultTouchRecepient
     		}
     	});
     }
-    
+    		public void onMusicChanged() {
+			// refreshPlayingTitle();
+		}
 }
