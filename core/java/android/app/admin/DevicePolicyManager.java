@@ -199,7 +199,6 @@ public class DevicePolicyManager {
     public static final int PASSWORD_QUALITY_FINGER = 0x1FFFF;
 
     /**
-    /**
      * Constant for {@link #setPasswordQuality}: the user must have entered a
      * password containing at least numeric characters.  Note that quality
      * constants are ordered so that higher values are more restrictive.
