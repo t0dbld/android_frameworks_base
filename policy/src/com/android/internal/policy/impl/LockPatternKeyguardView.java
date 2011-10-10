@@ -772,17 +772,14 @@ public class LockPatternKeyguardView extends KeyguardViewBase {
      * Given the current state of things, what should be the initial mode of
      * the lock screen (lock or unlock).
      */
-   private Mode getInitialMode() {
+    private Mode getInitialMode() {
         final IccCard.State simState = mUpdateMonitor.getSimState();
         if (stuckOnLockScreenBecauseSimMissing() || (simState == IccCard.State.PUK_REQUIRED)) {
             return Mode.LockScreen;
         } else {
-            // Show LockScreen first for any screen other than Pattern unlock and Finger unlock.
-            final boolean usingLockPattern = mLockPatternUtils.getKeyguardStoredPasswordQuality()
-                    == DevicePolicyManager.PASSWORD_QUALITY_SOMETHING;
-            final boolean usingLockFinger = mLockPatternUtils.getKeyguardStoredPasswordQuality()
-                    == DevicePolicyManager.PASSWORD_QUALITY_FINGER;
-            if (mLockscreenDisableOnSecurity && isSecure() && (usingLockPattern || usingLockFinger) || (simState == IccCard.State.PIN_REQUIRED)) {
+            // Disable LockScreen if security lockscreen is active and option in CMParts set
+            // Also don't show the slider lockscreen if pin is required
+            if (mLockscreenDisableOnSecurity && isSecure() || (simState == IccCard.State.PIN_REQUIRED)) {
                 return Mode.UnlockScreen;
             } else {
                 return Mode.LockScreen;
