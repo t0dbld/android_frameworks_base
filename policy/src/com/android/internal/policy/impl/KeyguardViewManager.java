@@ -91,6 +91,10 @@ public class KeyguardViewManager implements KeyguardWindowController {
         LockScreen, UnlockScreen, KeepCurrentState
     }
 
+    public synchronized void show() {
+        show(ShowMode.KeepCurrentState);
+    }
+
     /**
      * Show the keyguard.  Will handle creating and attaching to the view manager
      * lazily.
