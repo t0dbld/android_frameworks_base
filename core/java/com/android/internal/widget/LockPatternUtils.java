@@ -630,9 +630,9 @@ public class LockPatternUtils {
     public void setTactileFeedbackEnabled(boolean enabled) {
         setBoolean(Settings.Secure.LOCK_PATTERN_TACTILE_FEEDBACK_ENABLED, enabled);
     }
-    
+
     public void setVisibleDotsEnabled(boolean enabled) {
-        setBoolean(Settings.Secure.LOCK_DOTS_VISIBLE, enabled);        
+        setBoolean(Settings.Secure.LOCK_DOTS_VISIBLE, enabled);
     }
     
     public boolean isVisibleDotsEnabled() {
@@ -978,7 +978,7 @@ public class LockPatternUtils {
 		//	return 0;
 
 		//} else if (AM_STATUS.eAM_STATUS_NO_STORED_CREDENTIAL == iResult) {
-		//	return 0;		
+		//	return 0;
 
 		//} else if (AM_STATUS.eAM_STATUS_LIBRARY_NOT_AVAILABLE == iResult) {
 			//AuthLog.error("UnlockScreenFinger",
